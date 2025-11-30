@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "firehome",
+  "version": "1.0",
+  "description": "Replaces the default Firefox new tab with a custom homepage.",
+  "icons":{
+      "48": "icons/firehome.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  }
+}
