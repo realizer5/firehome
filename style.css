@@ -1,0 +1,61 @@
+:root {
+    @media (prefers-color-scheme: light) {
+        color-scheme: light;
+    }
+    @media (prefers-color-scheme: dark) {
+        color-scheme: dark;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color-scheme: light;
+
+    --clr-body-bg: hsl(10, 25%, 95%);
+    --clr-card-bg: hsl(10, 25%, 98%);
+    --clr-text: #232323;
+    --clr-heading: hsl(18, 65%, 48%);
+
+    @container style(--theme: dark) {
+        color-scheme: dark;
+
+        --clr-body-bg: hsl(173, 10%, 7%);
+        --clr-card-bg: hsl(173, 30%, 10%);
+        --clr-text: #cbd5e1;
+        --clr-heading: hsl(173, 50%, 70%);
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: var(--clr-text);
+}
+
+.search-form {
+    padding: 1rem;
+    border-radius: 1rem;
+    outline: none;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-input {
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    width: 40rem;
+    background-color: transparent;
+}
+
+#themeBtn{
+    background-color: var(--clr-card-bg);
+}
